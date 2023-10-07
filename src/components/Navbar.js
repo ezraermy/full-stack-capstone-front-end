@@ -35,19 +35,19 @@ const Navbar = () => {
                 <Link className="nav-link" to="/" onClick={handleNavbarSwitch}>Cars</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/session#login">Login</Link>
+                <Link className="nav-link" to="/session#login" onClick={handleNavbarSwitch}>Login</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/reservations/new">Rent</Link>
+                <Link className="nav-link" to="/reservations/new" onClick={handleNavbarSwitch}>Rent</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/reservations">My Rentals</Link>
+                <Link className="nav-link" to="/reservations" onClick={handleNavbarSwitch}>My Rentals</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/cars/new">Add a Car</Link>
+                <Link className="nav-link" to="/cars/new" onClick={handleNavbarSwitch}>Add a Car</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/cars/delete">Delete Car</Link>
+                <Link className="nav-link" to="/cars/delete" onClick={handleNavbarSwitch}>Delete Car</Link>
               </li>
               {
               userPresent && <LogoutBtn />
