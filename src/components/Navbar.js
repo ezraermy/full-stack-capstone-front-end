@@ -7,6 +7,12 @@ import logo from '../assets/images/logo.png';
 
 const Navbar = () => {
   const userPresent = useSelector((state) => state.user.id);
+  const navbarSwitchRef = React.useRef(null);
+
+  const handleNavbarSwitch = () => {
+    navbarSwitchRef.current.ClassList.toggle('active');
+  };
+
   return (
     <nav className="navbar navbar-body bg-body-tertiary fixed-top">
       <div className="container-fluid">
@@ -26,7 +32,7 @@ const Navbar = () => {
           <div className="offcanvas-body">
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
-                <Link className="nav-link" to="/">Cars</Link>
+                <Link className="nav-link" to="/" onClick={handleNavbarSwitch}>Cars</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/session#login">Login</Link>
